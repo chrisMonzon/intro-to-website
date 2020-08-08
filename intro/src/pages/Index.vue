@@ -13,6 +13,9 @@
       {{ name }}
       <q-btn v-on:click="testAlert()">Text</q-btn>
       <q-input outlined v-model="name" style="width: 150px;"/>
+      <q-btn outline to="me">me</q-btn>
+      <q-btn outline to="me2">me2</q-btn>
+      <q-btn outline to="TTT">TTT</q-btn>
     </div>
   </q-page>
 </template>
