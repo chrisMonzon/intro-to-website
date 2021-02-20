@@ -16,6 +16,8 @@
       <q-btn outline to="me">me</q-btn>
       <q-btn outline to="me2">me2</q-btn>
       <q-btn outline to="TTT">TTT</q-btn>
+      <q-btn outline to="Calculator">Calc</q-btn>
+      <q-btn outline to="Checkers">Checkers</q-btn>
     </div>
   </q-page>
 </template>

@@ -1,6 +1,13 @@
 
 const routes = [
   {
+    path: '/Calculator',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Calculator.vue') }
+    ]
+  },
+  {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
@@ -26,6 +33,13 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/TTT.vue') }
+    ]
+  },
+  {
+    path: '/Checkers',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Checkers.vue') }
     ]
   },
   // Always leave this as last one,

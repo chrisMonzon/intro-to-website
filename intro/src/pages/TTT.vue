@@ -1,19 +1,25 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <q-btn class="box" v-on:click="play(0, 0)">{{ board[0][0] }}</q-btn>
-      <q-btn class="box" v-on:click="play(0, 1)">{{ board[0][1] }}</q-btn>
-      <q-btn class="box" v-on:click="play(0, 2)">{{ board[0][2] }}</q-btn>
+  <div class="container" align="center">
+    <div class="center">
+      <div class="row">
+        <q-btn class="box" v-on:click="play(0, 0)">{{ board[0][0] }}</q-btn>
+        <q-btn class="box" v-on:click="play(0, 1)">{{ board[0][1] }}</q-btn>
+        <q-btn class="box" v-on:click="play(0, 2)">{{ board[0][2] }}</q-btn>
+      </div>
     </div>
-    <div class="row">
-      <q-btn class="box" v-on:click="play(1, 0)">{{ board[1][0] }}</q-btn>
-      <q-btn class="box" v-on:click="play(1, 1)">{{ board[1][1] }}</q-btn>
-      <q-btn class="box" v-on:click="play(1, 2)">{{ board[1][2] }}</q-btn>
+    <div class="center">
+      <div class="row">
+        <q-btn class="box" v-on:click="play(1, 0)">{{ board[1][0] }}</q-btn>
+        <q-btn class="box" v-on:click="play(1, 1)">{{ board[1][1] }}</q-btn>
+        <q-btn class="box" v-on:click="play(1, 2)">{{ board[1][2] }}</q-btn>
+      </div>
     </div>
-    <div class="row">
-      <q-btn class="box" v-on:click="play(2, 0)">{{ board[2][0] }}</q-btn>
-      <q-btn class="box" v-on:click="play(2, 1)">{{ board[2][1] }}</q-btn>
-      <q-btn class="box" v-on:click="play(2, 2)">{{ board[2][2] }}</q-btn>
+    <div class="center">
+      <div class="row">
+        <q-btn class="box" v-on:click="play(2, 0)">{{ board[2][0] }}</q-btn>
+        <q-btn class="box" v-on:click="play(2, 1)">{{ board[2][1] }}</q-btn>
+        <q-btn class="box" v-on:click="play(2, 2)">{{ board[2][2] }}</q-btn>
+      </div>
     </div>
   </div>
 </template>
@@ -42,9 +48,11 @@ export default {
         if (this.winCheck('X')) {
           this.winner = true
           console.log('X won')
+          alert('X won!')
         } else if (this.winCheck('O')) {
           this.winner = true
           console.log('O won')
+          alert('O won!')
         }
         this.$forceUpdate()
       }
@@ -83,5 +91,15 @@ export default {
 .box {
   width: 50px;
   height: 50px;
+}
+
+.container {
+  padding-top: 30vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
